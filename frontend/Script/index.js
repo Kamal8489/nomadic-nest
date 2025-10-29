@@ -6,6 +6,7 @@ const form = qs('.contact-form');
 const statusEl = qs('#form-status');
 const popup = qs('#popup');
 const announcer = qs('#aria-announcer');
+const API_URL = 'https://nomadic-nest.onrender.com';
 
 // field validators
 const validators = {
@@ -86,7 +87,7 @@ if (form) {
     announce('Sending your message');
 
     try {
-      const res = await fetch('http://localhost:4000/send-message', {
+      const res = await fetch(`${API_URL}/send-message`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
