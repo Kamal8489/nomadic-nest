@@ -82,5 +82,11 @@ app.post("/send-message", async (req, res) => {
 // --------------------
 // SERVER LISTEN
 // --------------------
+
+app.get("/", (req, res) => {
+  res.send("Nomadic Nest backend is live and running!");
+});
+
+
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => console.log(` Server running on port ${PORT}`));
