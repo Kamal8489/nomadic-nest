@@ -11,9 +11,21 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const app = express();
-app.use(cors());
-app.use(express.json());
 
+// --------------------
+// CORS CONFIGURATION (IMPORTANT)
+// --------------------
+app.use(cors({
+  origin: [
+    "http://127.0.0.1:5500",           // for local testing
+    "http://localhost:5500",           // local fallback
+    "https://nomadicnest.netlify.app"  // your live frontend (replace if different)
+  ],
+  methods: ["GET", "POST"],
+}));
+
+// Allow JSON body parsing
+app.use(express.json());
 
 // --------------------
 // POST /send-message
@@ -26,7 +38,7 @@ app.post("/send-message", async (req, res) => {
   }
 
   try {
-    // configure transporter
+    // Configure transporter
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
@@ -35,10 +47,10 @@ app.post("/send-message", async (req, res) => {
       },
     });
 
-    // Admin email (to you)
+    // Email to admin (you)
     const adminMailOptions = {
       from: `"Nomadic Nest Contact" <${process.env.EMAIL_USER}>`,
-      to: "nomadicnestkodai@gmail.com", // admin email
+      to: "nomadicnestkodai@gmail.com", // your admin email
       subject: `New Message from ${name} — ${type}`,
       html: `
         <h2>Nomadic Nest Contact Form</h2>
@@ -53,11 +65,11 @@ app.post("/send-message", async (req, res) => {
       `
     };
 
-    //  Send email to admin first
+    // Send email to admin
     await transporter.sendMail(adminMailOptions);
     console.log("📨 Email sent successfully to admin");
 
-    //  Then send confirmation email to the user
+    // Confirmation email to user
     await transporter.sendMail({
       from: `"Nomadic Nest" <${process.env.EMAIL_USER}>`,
       to: email,
@@ -68,25 +80,25 @@ app.post("/send-message", async (req, res) => {
         <p>Warm regards,<br>Nomadic Nest Team</p>
       `
     });
-    console.log(" Confirmation email sent to user");
+    console.log("✅ Confirmation email sent to user");
 
-    // finally respond
     res.json({ success: true });
 
   } catch (err) {
-    console.error(" Email send error:", err);
+    console.error("❌ Email send error:", err);
     res.status(500).json({ success: false, error: "Failed to send email" });
   }
 });
 
 // --------------------
-// SERVER LISTEN
+// ROOT ENDPOINT
 // --------------------
-
 app.get("/", (req, res) => {
   res.send("Nomadic Nest backend is live and running!");
 });
 
-
+// --------------------
+// SERVER LISTEN
+// --------------------
 const PORT = process.env.PORT || 4000;
-app.listen(PORT, () => console.log(` Server running on port ${PORT}`));
+app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
