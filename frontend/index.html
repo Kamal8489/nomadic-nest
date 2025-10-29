@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nomadic Nest | Kodaikanal Getaway</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Nomadic Nest — cozy cottages, huts, and A-frame stays in the misty hills of Kodaikanal. Perfect getaway for couples, families, and travelers seeking peace." />
+  <meta name="keywords" content="Nomadic Nest, Kodaikanal cottages, A-frame cabin, homestay, mountain stay, hut stay, couple retreat, nature getaway" />
+  <meta name="author" content="Nomadic Nest" />
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <!-- Stylesheet & Favicon -->
+  <link rel="stylesheet" href="./Style/style.css">
+  <link rel="icon" href="./images/cropped_circle_image.png" type="image/png" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header id="header">
+    <div class="container header-content">
+      <a href="#" class="logo">
+        <img src="./images/1000130592.png" alt="Nomadic Nest Logo">
+       <h3> Nomadic Nest</h3>
+      </a>
+      <div class="mobile-menu">☰</div>
+      <nav>
+        <ul>
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#stays">Stays</a></li>
+          <li><a href="#destinations">Destinations</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-bg hero-bg1"></div>
+    <div class="hero-bg hero-bg2"></div>
+    <div class="container hero-content">
+        <h1 data-aos="zoom-in">Escape to <span></span></h1>
+        <p data-aos="zoom-in">Find peace among the clouds — cozy cottages, A-frame stays, and <br> adventures await at <b> Nomadic Nest</b> .</p>
+      <a data-aos="fade-right" href="#stays" class="btn">Explore Stays</a>
+      <a data-aos="fade-left" href="#contact" class="btn btn-outline" style="margin-left: 10px;">Book Now</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2 data-aos="fade-down">About Nomadic Nest</h2>
+    <div class="about-content">
+    <video autoplay muted loop data-aos="fade-right" >
+        <source  src="./images/From KlickPin CF Beautiful Kodaikanal Aerial View Rice Terraces and Mountain Houses.mp4">
+    </video>
+      <p data-aos="fade-left">
+        Discover serenity at Nomadic Nest — a tranquil getaway nestled in the lush hills of Kodaikanal. 
+        Our cozy cottages, huts, and A-frame stays are designed for couples, families, and adventurers 
+        seeking peace in nature. Enjoy misty mornings, starlit nights, and breathtaking views from your window.
+        We've been creating unforgettable experiences for travelers since 2015, with a focus on sustainable
+        tourism and authentic local experiences.
+      </p>
+    </div>
+  </section>
+
+  <!-- Stays Section -->
+  <section id="stays" class="stays">
+    <h2 data-aos="fade-down">Our Stays</h2>
+    <div class="stay-grid">
+      <div class="stay-card" data-aos="fade-up-right">
+        <img src="./images/WhatsApp Image 2025-10-10 at 12.51.32 AM.jpeg" alt="Hut Stay" />
+        <h3>Hut Stay</h3>
+        <p>Stay close to nature in our charming wooden huts with hill views.</p>
+        <p><strong>From ₹2,500/night</strong></p>
+        <ul class="stay-features">
+          <li>🌿 Hill View</li>
+          <li>🍳 Breakfast Included</li>
+          <li>🔥 Campfire Available</li>
+        </ul>
+      </div>
+
+      <div class="stay-card" data-aos="fade-up">
+        <img src="./images/WhatsApp Image 2025-10-10 at 12.51.36 AM (1).jpeg" alt="A Frame Cabin" />
+        <h3>A-Frame Cabin</h3>
+        <p>Perfect for couples — modern, warm, and surrounded by misty forests.</p>
+        <p><strong>From ₹3,000/night</strong></p>
+        <ul class="stay-features">
+          <li>🌲 Forest View</li>
+          <li>🔥 Indoor Heater</li>
+          <li>☕ Private Balcony</li>
+        </ul>
+      </div>
+
+      <div class="stay-card" data-aos="fade-up">
+        <img src="./images/WhatsApp Image 2025-10-10 at 12.51.35 AM.jpeg" alt="Tent Stay" />
+        <h3>Tent Stay</h3>
+        <p>Adventure lovers will enjoy our starlit camping experience.</p>
+        <p><strong>From ₹1,500/night</strong></p>
+        <ul class="stay-features">
+          <li>🌌 Stargazing</li>
+          <li>🔥 Campfire Area</li>
+          <li>🎒 Adventure Zone</li>
+        </ul>
+      </div>
+
+       <div class="stay-card" data-aos="fade-up-right">
+        <img src="./images/WhatsApp Image 2025-10-10 at 12.51.36 AM.jpeg" alt="Tent Stay" />
+        <h3>Rooms</h3>
+        <p>Relax and unwind in our cozy, well-furnished rooms — ideal for family vacations, romantic getaways, or business trips.</p>
+        <p><strong>From ₹1,500/night</strong></p>
+        <ul class="stay-features">
+          <li>🏨 Comfortable & Spacious Rooms</li>
+          <li>🧹 Clean & Hygienic Environment</li>
+          <li>📶 Free Wi-Fi & 24/7 Service</li>
+        </ul>
+      </div>
+
+       <div class="stay-card" data-aos="fade-up">
+        <img src="./images/cab car.jpg" alt="Tent Stay" />
+        <h3>Cab Rentals</h3>
+        <p>Travel comfortably with our reliable cab rental services — perfect for city tours, airport transfers, or weekend getaways.</p>
+        <p><strong>From ₹1,500/day</strong></p>
+        <ul class="stay-features">
+          <li>🚗 Clean & Well-Maintained Cars</li>
+          <li>👨‍✈️ Professional Drivers</li>
+          <li>📍 On-Time Pickups & Drop-offs</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Destinations Section -->
+  <section class="section" id="destinations">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-aos="fade-down">Explore Kodaikanal</h2>
+        <p data-aos="zoom-out">Discover the beautiful attractions and activities around Kodaikanal</p>
+      </div>
+
+      <!-- Search Component -->
+      <div id="search-component" ></div>
+
+      <!-- Destinations Grid -->
+      <div data-aos="fade-up" class="destinations-grid" id="destinations-container">
+        <!-- Destination cards will be populated by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-aos="fade-down">What Our Travelers Say</h2>
+        <p data-aos="zoom-in">Hear from people who have experienced our travel services</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card" data-aos="fade-right">
+          <p class="testimonial-text">"The A-frame cabin was absolutely magical! Waking up to misty mountains and enjoying coffee on the private balcony was the highlight of our trip. We'll definitely be back!"</p>
+          <div class="testimonial-author">
+            <img src="./images/dp1.jpg" alt="Sarah Johnson" class="author-avatar">
+            <div class="author-info">
+              <h4>Ahaleeth_78</h4>
+              <p>Stayed in A-Frame Cabin</p>
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card" data-aos="fade-up">
+          <p class="testimonial-text">"Our family had an amazing time in the hut stay. The kids loved the campfire and we appreciated the peaceful surroundings. The staff went above and beyond to make our stay comfortable."</p>
+          <div class="testimonial-author">
+            <img src="./images/dp2.jpg" alt="Michael Chen" class="author-avatar">
+            <div class="author-info">
+              <h4>xx_Jahmin13</h4>
+              <p>Family Hut Stay</p>
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card" data-aos="fade-left">
+          <p class="testimonial-text">"The tent stay was an incredible adventure! Falling asleep under the stars and waking up to breathtaking views was unforgettable. Perfect for couples looking for a unique experience."</p>
+          <div class="testimonial-author">
+            <img src="./images/dp3.jpg" alt="Emma Rodriguez" class="author-avatar">
+            <div class="author-info">
+              <h4>Vinoth_rj</h4>
+              <p>Tent Stay Experience</p>
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery">
+    <h2>Gallery</h2>
+    <div class="image-slider" data-aos="zoom-in">
+      <div class="image-track" >
+        <img src="./images/Became Fav Place In My List!!.jpg" alt="Kodaikanala">
+        <img src="./images/WhatsApp Image 2025-10-10 at 12.58.16 AM.jpeg" alt="Cabin View" />
+        <img src="./images/WhatsApp Image 2025-10-10 at 12.51.35 AM.jpeg" alt="Hut Stay Exterior" />
+        <img src="./images/WhatsApp Image 2025-10-10 at 12.51.36 AM.jpeg" alt="Cozy Bed Setup" />
+        <img src="./images/WhatsApp Image 2025-10-10 at 12.51.32 AM.jpeg" alt="Tent Setup Under Stars" />
+        <img src="./images/Kodaikanal.png" alt="Mountain View" />
+        <img src="./images/shola falls.jpg" alt="Shola falls" />
+        <img src="./images/Sublime view of the Pillar rocks, Kodaikanal.jpg" alt="Shola falls" />
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Back to Top Button -->
+  <div class="back-to-top" id="backToTop">
+    <i class="fas fa-chevron-up"></i>
+  </div>
+
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="contact">
+    <h2 data-aos="fade-down">Book Your Stay</h2>
+    <p data-aos="zoom-in">Plan your perfect getaway to Kodaikanal. We'd love to host you!</p>
+
+    <a href="https://wa.me/8270885405" target="_blank" rel="noopener noreferrer" class="whatsapp-btn" data-aos="flip-left">
+      Chat on WhatsApp
+    </a>
+
+    <form class="contact-form" novalidate>
+      <div class="form-field">
+        <input type="text" name="name" placeholder="Your Name" required aria-required="true" aria-describedby="name-help" title="Required"  />
+        <span class="validation-icon" aria-hidden="true"></span>
+      </div>
+
+      <div class="form-field">
+        <input type="email" name="email" placeholder="Your Email" required aria-required="true" aria-describedby="email-help" title="Required" />
+        <span class="validation-icon" aria-hidden="true"></span>
+        <div id="email-help" class="field-help">We'll only use this to reach you</div>
+      </div>
+
+      <div class="form-field">
+        <input type="tel" name="phone" placeholder="Your Phone Number (optional)" aria-describedby="phone-help" title="optional" />
+        <span class="validation-icon" aria-hidden="true"></span>
+      </div>
+
+      <div class="form-field">
+        <select name="type" required aria-required="true" aria-describedby="type-help">
+          <option value="">Select Booking Type</option>
+          <option value="stay">Stay</option>
+          <option value="event">Event</option>
+          <option value="inquiry">General Inquiry</option>
+        </select>
+        <span class="validation-icon" aria-hidden="true"></span>
+      </div>
+
+      <div class="form-field">
+        <textarea name="message" placeholder="Your Message" required aria-required="true" aria-describedby="message-help" title="Tell us about your stay"></textarea>
+        <span class="validation-icon" aria-hidden="true"></span>
+      </div>
+
+      <button type="submit" class="submit-btn">Send Message</button>
+
+      <!-- inline status message -->
+      <p id="form-status" aria-live="polite" class="form-status" role="status"></p>
+    </form>
+
+    <!-- ARIA announcer for important non-visual messages -->
+    <div id="aria-announcer" aria-live="assertive" class="sr-only" aria-atomic="true"></div>
+  </section>
+
+  <!-- POPUP THANK YOU CARD -->
+  <div class="popup-overlay" id="popup">
+    <div class="popup-card">
+      <h3>Thank You, Traveler!</h3>
+      <p>We've received your message and will reach out soon.  
+      Your next mountain escape begins here at Nomadic Nest!</p>
+      <button id="closePopup">Close</button>
+    </div>
+  </div>
+
+  <div class="social-links" >
+  <a data-aos="fade-down" href="https://www.facebook.com/share/1CcJ8TQfAt/" target="_blank"><i class="fab fa-facebook-f" ></i></a>
+  <a data-aos="fade-left" href="https://www.instagram.com/nomadicnest._/" target="_blank"><i class="fab fa-instagram"></i></a>
+  <a data-aos="fade-up" href="https://wa.me/8270885405" aria-label="Chat on WhatsApp" target="_blank" rel="noopener noreferrer">
+   <i class="fab fa-whatsapp" aria-hidden="true"></i>
+  </a>
+</div>
+
+
+
+  <!-- CONFETTI CANVAS -->
+  <canvas id="confettiCanvas"></canvas>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+    <img data-aos="flip-right" src="./images/cropped_circle_image.png" alt="" width="70px">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Nomadic Nest</h3>
+          <p>Creating unforgettable travel experiences since 2015. We're passionate about helping you discover the beauty of Kodaikanal.</p>
+          <div class="social-links-footer">
+            <a href="https://www.facebook.com/share/1CcJ8TQfAt/"><i class="fab fa-facebook-f"></i></a>
+           <a href="https://wa.me/8270885405" aria-label="Chat on WhatsApp" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-whatsapp" aria-hidden="true"></i>
+           </a>
+            <a href="https://www.instagram.com/nomadicnest._/"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#stays">Stays</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Our Stays</h3>
+          <ul>
+            <li><a href="#">Hut Stay</a></li>
+            <li><a href="#">A-Frame Cabin</a></li>
+            <li><a href="#">Tent Stay</a></li>
+            <li><a href="#">Special Offers</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Contact Info</h3>
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i> Kodaikanal, Tamil Nadu</li>
+            <li><i class="fas fa-phone"></i> +91 82708 85405</li>
+            <li><i class="fas fa-envelope"></i> nomadicneststay@gmail.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2023 Nomadic Nest. All rights reserved. | Crafted with ❤️ in Kodaikanal</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript Files -->
+  <script src="./Script/index.js"></script>
+  <script src="./Script/slide.js"></script>
+
+  <!-- AOS JS -->
+ <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+ <script>
+  AOS.init({
+    duration: 1000, // Animation duration in ms
+    once: true, // Animation happens only once when scrolling down
+  });
+ </script>
+
+</body>
+</html>
