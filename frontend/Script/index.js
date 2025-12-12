@@ -6,7 +6,7 @@ const form = qs('.contact-form');
 const statusEl = qs('#form-status');
 const popup = qs('#popup');
 const announcer = qs('#aria-announcer');
-const API_URL = 'https://nomadic-nest.onrender.com';
+const API_URL = 'https://nomadic-nest.onrender.com/send-message';
 
 // field validators
 const validators = {
