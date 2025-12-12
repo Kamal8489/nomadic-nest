@@ -17,9 +17,7 @@ const app = express();
 // --------------------
 app.use(cors({
   origin: [
-    "http://127.0.0.1:5500",           // for local testing
-    "http://localhost:5500",           // local fallback
-    "https://nomadicnest.netlify.app"  // your live frontend (replace if different)
+    "https://nomadic-nest-maih.vercel.app"  // your live frontend (replace if different)
   ],
   methods: ["GET", "POST"],
 }));
